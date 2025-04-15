@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookNest</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .header {
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            color: white;
+            text-align: center;
+            padding: 60px 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .containerTeam{
+            display: flex;
+            /* margin-left:20px; */
+            justify-content: space-between;
+            gap: 0px; 
+            /* flex-wrap: wrap; */
+        }
+        .about-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            margin-bottom: 60px;
+        }
+
+        .about-image img {
+            width: 80%;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .mission-section {
+            background-color: #f9f9f9;
+            padding: 60px 0;
+        }
+
+        .mission-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .mission-card {
+            width: 300px;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .image{
+            width:150px;
+            height:200px;
+        }
+        .mission-card i {
+            font-size: 2.5em;
+            color: #2d3436;
+            margin-bottom: 20px;
+        }
+
+        .team-section {
+            padding: 60px 0;
+        }
+
+        .contact-section {
+            background-color: #2d3436;
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .about-section {
+                grid-template-columns: 1fr;
+            }
+            
+            .mission-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+        .header {
+            position: relative; /* Needed for absolute positioning of children */
+        }
+
+        .back-to-cart {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: white;
+            font-size: 1.1em;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .back-to-cart:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateX(-3px);
+        }
+
+        .header h1 {
+            margin-top: 20px; /* Add space between back link and heading */
+        }
+
+    </style>
+    <!-- Add Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="back-to-cart">← Back to Home</a>
+        <h1>About BookNest</h1>
+        <p>Discover Our Story</p>
+    </header>
+
+    <div class="container">
+        <section class="about-section">
+            <div class="about-content">
+                <h2>Our Story</h2>
+                <p>Founded in 2025, BookNest began as a small neighborhood bookshop with a simple mission: to connect readers with great books and foster a love of literature in our community. What started as a modest collection of used and new books has grown into a beloved local institution, housing over 30 titles across various genres.</p>
+                <p>Our passionate team of book enthusiasts carefully curates each selection, ensuring there's something for every reader - from bestselling novels to hidden gems waiting to be discovered.</p>
+            </div>
+            <div class="about-image">
+                <img src="https://cdn.prod.website-files.com/5bfcd28ccfc79b4e94c3483e/5c1c9a096dd789845b093482_interior-design-of-bookstore.png" alt="Bookstore Interior">
+            </div>
+        </section>
+    </div>
+    <section class="mission-section">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 30px;">Our Mission</h2>
+            <div class="mission-cards">
+                <div class="mission-card">
+                    <i class="fas fa-book-open"></i>
+                    <h3>Curate Quality</h3>
+                    <p>We carefully select titles that inspire, educate, and entertain</p>
+                </div>
+                <div class="mission-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Build Community</h3>
+                    <p>Hosting regular book clubs, author events, and reading programs</p>
+                </div>
+                <div class="mission-card">
+                    <i class="fas fa-heart"></i>
+                    <h3>Share the Love</h3>
+                    <p>Promoting literacy and lifelong learning for all ages</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="team-section">
+        <h2 style="display: flex; justify-content: center;">Meet Our Team</h2>
+        <div class="containerTeam">
+            <div class="mission-cards" style="margin-top: 40px;">
+                <div class="mission-card">
+                    <img class="image" src="Anuu.jpeg" alt="Team Member" style="width: 100%; border-radius: 50%; margin-bottom: 20px;">
+                    <h3>Anu</h3>
+                    <p>Head Librarian & Buyer</p>
+                </div>
+            
+            </div>
+
+            <div class="mission-cards" style="margin-top: 40px;">
+                <div class="mission-card">
+                    <img class="image" src="julie.jpeg" alt="Team Member" style="width: 100%; border-radius: 50%; margin-bottom: 20px;">
+                    <h3>Julie kumari</h3>
+                    <p>Head Librarian & Buyer</p>
+                </div>
+            
+            </div>
+
+            <div class="mission-cards" style="margin-top: 40px;">
+                <div class="mission-card">
+                    <img class="image" src="team-member1.jpg" alt="Team Member" style="width: 100%; border-radius: 50%; margin-bottom: 20px;">
+                    <h3>Guru sharan</h3>
+                    <p>Head Librarian & Buyer</p>
+                </div>
+            
+            </div>
+
+            <div class="mission-cards" style="margin-top: 40px;">
+                <div class="mission-card">
+                    <img class="image" src="team-member1.jpg" alt="Team Member" style="width: 100%; border-radius: 50%; margin-bottom: 20px;">
+                    <h3>Ayush</h3>
+                    <p>Head Librarian & Buyer</p>
+                </div>
+            
+            </div>
+        </div>
+    </section>
+
+    
+</body>
+</html>

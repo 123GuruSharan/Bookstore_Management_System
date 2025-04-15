@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login - BookNest</title>
+   <style>
+    /* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body, html {
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Background with overlay */
+.login-background {
+  position: relative;
+  background: url('books.jpg') no-repeat center center/cover;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* overlay */
+  z-index: 1;
+}
+
+/* Card */
+.login-card {
+  position: relative;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(12px);
+  padding: 40px;
+  border-radius: 16px;
+  width: 420px;
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.login-card h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.login-card .subtitle {
+  font-size: 14px;
+  margin-bottom: 30px;
+  color: #f0f0f0;
+}
+
+/* Form */
+.login-form input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: rgba(255,255,255,0.15);
+  color: #fff;
+  outline: none;
+}
+
+.login-form input::placeholder {
+  color: #eee;
+}
+
+.login-form button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  background-color: #07b0ff;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  color:#ffffff;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+.login-form button:hover {
+  background-color: #005de0;
+}
+
+/* Forgot Password */
+.forgot-password {
+  text-align: right;
+  margin-top: -5px;
+  margin-bottom: 10px;
+}
+
+.forgot-password a {
+  color: #ffffff;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.forgot-password a:hover {
+  text-decoration: underline;
+}
+
+/* Divider */
+.divider {
+  margin: 20px 0;
+  position: relative;
+  color: #ccc;
+  font-size: 13px;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 40%;
+  background: #ccc;
+  top: 50%;
+}
+
+.divider::before {
+  left: 0;
+}
+
+.divider::after {
+  right: 0;
+}
+
+/* Google Button */
+.google-btn {
+  background: white;
+  color: #333;
+  border: none;
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.google-btn:hover {
+  background-color: #f1f1f1;
+}
+
+.google-btn img {
+  width: 20px;
+}
+
+/* Signup Link */
+.signup-link {
+  font-size: 13px;
+  margin-top: 20px;
+}
+
+.signup-link a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.signup-link a:hover {
+  text-decoration: underline;
+}
+
+   </style>
+</head>
+<body>
+
+  <div class="login-background">
+    <div class="login-card">
+      <h2>Welcome 📚</h2>
+      <p class="subtitle">Login to your BookNest account</p>
+
+      <form class="login-form" action="homepage.html" method="POST" required>
+        <input type="email" placeholder="Email address" />
+        <input class="pass" type="password" placeholder="Password" required />
+
+        <div class="forgot-password">
+          <a href="#">Forgot Password?</a>
+        </div>
+
+        <button type="submit">Login</button>
+      </form>
+
+      <div class="divider">or</div>
+      <button class="google-btn">
+        <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google Icon" />
+        Continue with Google
+      </button>
+
+      <p class="signup-link">New here? <a href="signup.html">Create an account</a></p>
+    </div>
+  </div>
+</body>
+</html>

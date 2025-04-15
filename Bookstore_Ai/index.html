@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bookworm | Discover Your Next Favorite Book</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">📘 Bookworm</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="AboutUs.html">About Us</a></li>
+                <li><a href="#">Our Stores</a></li>
+                <li><a href="#">Testimonials</a></li>
+                <li><a href="carts/cart.html"><i class="fas fa-shopping-cart"></i></a></li>
+                <li><a href="login.html"><i class="fas fa-user"></i> Login</a></li>
+                <li>
+                    <label class="theme-toggle">
+                        <input type="checkbox" id="themeSwitch">
+                        <span class="slider"></span>
+                    </label>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Discover Your Next Favorite Book</h1>
+        <p>Browse our carefully curated collection of books from various genres.</p>
+
+        <div class="filters">
+            <h3>Genres</h3>
+            <div class="genre-tags" id="genreTags"></div>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search by title or author...">
+            </div>
+        </div>
+    </section>
+
+    <section class="book-list" id="bookList">
+        <!-- Books inserted via JS -->
+        <div class="book-card">
+            <img src="https://images-na.ssl-images-amazon.com/images/I/81gepf1eMqL.jpg" alt="Atomic Habits">
+            <div class="info">
+              <div class="title">Atomic Habits</div>
+              <div class="author">James Clear</div>
+              <div class="rating">★ 4.9</div>
+              <div class="genre-labels">
+                <span>Non-Fiction</span>
+                <span>Self-Help</span>
+              </div>
+              <div class="price">$16.49</div>
+            </div>
+          </div>
+          
+          <div class="book-card">
+            <img src="https://images-na.ssl-images-amazon.com/images/I/71aFt4+OTOL.jpg" alt="The Alchemist">
+            <div class="info">
+              <div class="title">The Alchemist</div>
+              <div class="author">Paulo Coelho</div>
+              <div class="rating">★ 4.7</div>
+              <div class="genre-labels">
+                <span>Fiction</span>
+                <span>Philosophy</span>
+              </div>
+              <div class="price">$10.89</div>
+            </div>
+          </div>
+          
+          <div class="book-card">
+            <img src="https://images-na.ssl-images-amazon.com/images/I/71KilybDOoL.jpg" alt="The Psychology of Money">
+            <div class="info">
+              <div class="title">The Psychology of Money</div>
+              <div class="author">Morgan Housel</div>
+              <div class="rating">★ 4.8</div>
+              <div class="genre-labels">
+                <span>Finance</span>
+                <span>Non-Fiction</span>
+              </div>
+              <div class="price">$14.75</div>
+            </div>
+          </div>
+          
+          <div class="book-card">
+            <img src="https://images-na.ssl-images-amazon.com/images/I/61Iz2yy2CKL.jpg" alt="Rich Dad Poor Dad">
+            <div class="info">
+              <div class="title">Rich Dad Poor Dad</div>
+              <div class="author">Robert T. Kiyosaki</div>
+              <div class="rating">★ 4.6</div>
+              <div class="genre-labels">
+                <span>Finance</span>
+                <span>Self-Help</span>
+              </div>
+              <div class="price">$12.29</div>
+            </div>
+          </div>
+          
+          <div class="book-card">
+            <img src="https://images-na.ssl-images-amazon.com/images/I/91bYsX41DVL.jpg" alt="Ikigai">
+            <div class="info">
+              <div class="title">Ikigai</div>
+              <div class="author">Francesc Miralles</div>
+              <div class="rating">★ 4.5</div>
+              <div class="genre-labels">
+                <span>Self-Help</span>
+                <span>Philosophy</span>
+              </div>
+              <div class="price">$9.99</div>
+            </div>
+          </div>
+          <div class="book-card">
+            <img src="https://images-na.ssl-images-amazon.com/images/I/91bYsX41DVL.jpg" alt="Ikigai">
+            <div class="info">
+              <div class="title">Ikigai</div>
+              <div class="author">Francesc Miralles</div>
+              <div class="rating">★ 4.5</div>
+              <div class="genre-labels">
+                <span>Self-Help</span>
+                <span>Philosophy</span>
+              </div>
+              <div class="price">$9.99</div>
+            </div>
+          </div><div class="book-card">
+            <img src="Ikigai.webp" alt="Ikigai">
+            <div class="info">
+              <div class="title">Ikigai</div>
+              <div class="author">Francesc Miralles</div>
+              <div class="rating">★ 4.5</div>
+              <div class="genre-labels">
+                <span>Self-Help</span>
+                <span>Philosophy</span>
+              </div>
+              <div class="price">$9.99</div>
+            </div>
+          </div>
+    </section>
+
+    <div id="noResults" class="no-results hidden">No books match your search.</div>
+
+    <script src="main.js"></script>
+</body>
+</html>

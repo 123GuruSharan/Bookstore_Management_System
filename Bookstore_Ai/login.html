@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Login | Bookworm</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">📘 Bookworm</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="AboutUs.html">About Us</a></li>
+                <li><a href="#">Our Stores</a></li>
+                <li><a href="#">Testimonials</a></li>
+                <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                <li><a class="active" href="login.html"><i class="fas fa-user"></i> Login</a></li>
+                <li>
+                    <label class="theme-toggle">
+                        <input type="checkbox" id="themeSwitch" />
+                        <span class="slider"></span>
+                    </label>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="login-container">
+        <h2>Login to Your Account</h2>
+        <form id="loginForm" action="#" method="POST" class="login-form">
+            <label for="username">Username or Email</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username or email" required />
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required />
+
+            <button type="button" class="btn-login" onclick="window.location.href='index.html';">Login</button>
+        </form>
+        <p class="signup-link">
+            Don't have an account? <a href="#">Sign up here</a>
+        </p>
+    </main>
+
+</body>
+</html>
